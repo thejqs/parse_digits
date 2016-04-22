@@ -20,8 +20,8 @@ Meantime, just add in your own file paths and get to analyzing.
 The two main parser scripts can be run together or separately. Together and you get some easy-to-read output. Like this:
 
 ```python
->>>: from parser import run_parse_digits as rpd
->>>: rpd.run_parser('data/test_data.txt')
+>>> from parser import run_parse_digits as rpd
+>>> rpd.run_parser('data/test_data.txt')
 
 Of 1000 integers:
            	100 was the highest,
@@ -35,7 +35,7 @@ But it's fine to import `parse_digits` from the `parser` directory and `python p
 
 ```python
 >>> from parser import parse_digits as pd
->>>: pd.parse_digits('data/test_data.txt')
+>>> pd.parse_digits('data/test_data.txt')
 SummaryDigits(length=1000, maximum=100, minimum=1, mode_value=13, mode_occurrences=19, median=48.0) 
 ```
 
