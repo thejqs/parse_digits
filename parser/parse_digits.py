@@ -92,11 +92,11 @@ def parse_digits(path):
             median = find_median(results)
             SummaryDigits = namedtuple('SummaryDigits', ['length', 'maximum', 'minimum', 'mode_value', 'mode_occurrences', 'median'])
             p = SummaryDigits(len_results, max_result, min_result, mode[0], mode[1], median)
-            print(p.length)
             return p
         except TypeError as e:
             return '{}\n\t{}'.format(e,
                                     "Are you sure this is really a file full of integers? Because I'm not")
 
 if __name__ == '__main__':
-    parse_digits()
+    path = '../data/numbers.txt'
+    parse_digits(path)
