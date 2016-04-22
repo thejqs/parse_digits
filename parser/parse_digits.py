@@ -83,8 +83,7 @@ def parse_digits(path):
     """
     with open(path, 'r') as f:
         try:
-            results = []
-            results += [int(l) for line in f for l in line.split()]
+            results = [int(l) for line in f for l in line.split()]
             len_results = find_length(results)
             max_result = find_largest(results)
             min_result = find_smallest(results)
