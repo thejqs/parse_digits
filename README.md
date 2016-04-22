@@ -19,8 +19,7 @@ Meantime, just add in your own file paths and get to analyzing.
 
 The two main parser scripts can be run together or separately. Together and you get some easy-to-read output. Like this:
 
-```
-python
+```python
 >>>: from parser import run_parse_digits as rpd
 >>>: rpd.run_parser('data/test_data.txt')
 
@@ -34,8 +33,7 @@ This script took 0:00:00.004898 to run
 
 But it's fine to import `parse_digits` from the `parser` directory and `python parse_digits(your_filepath_here)`. In a case like that, you get back a structured collection, `SummaryDigits`, which is a `namedtuple` and accessible by position or keyword argument. You'll find what you need for either both inside the file itself. That output looks like this:
 
-```
-python
+```python
 >>> from parser import parse_digits as pd
 >>>: pd.parse_digits('data/test_data.txt')
 SummaryDigits(length=1000, maximum=100, minimum=1, mode_value=13, mode_occurrences=19, median=48.0) 
