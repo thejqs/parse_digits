@@ -8,7 +8,7 @@ With a pair of simple, tested scripts running together in unison and a couple sm
 
 - the largest and smallest values
 - the median
-- the most-common value
+- the most-common value and how frequently it occurs
 - and the total number of integers analyzed to do all that. 
 
 Simply clone this repo into a project file of your own, change a couple environment settings, and **all this can be yours**.
