@@ -11,6 +11,7 @@ for fun.
 from collections import Counter
 from collections import namedtuple
 
+
 def find_median(lst):
     """
     finds or calculates the median value in
@@ -37,6 +38,10 @@ def find_median(lst):
         return (sorted_list[idx] + sorted_list[idx + 1]) / 2.0
 
 
+# breaking out the one-liners to make them
+# more straightforward to test.
+# also if we had to add a little logic here and there
+# we wouldn't clutter up the main function
 def find_length(lst):
     """
     given an iterable, returns its length
