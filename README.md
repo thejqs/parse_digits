@@ -11,9 +11,9 @@ With a pair of simple, tested scripts running together in unison and a couple sm
 - the most-common value and how frequently it occurs
 - and the total number of integers analyzed to do all that. 
 
-Simply clone this repo into a project file of your own, change a couple environment settings, and **all this can be yours**.
+Simply clone this repo into a project directory of your own, change a couple environment settings, and **all this can be yours**.
 
-After you've cloned the repo, a couple things will help you out. In the `parser/run_parse_digits.py` file, simply replace my sample in `sys.path.append()` with your own project path. Then do the same in the `tests/test_parse_digits.py` file. Those two settings will help you run the tests and diagnose issues should anything untoward happen while running the scripts.
+After you've cloned the repo, a couple things will help you out. In the `parser/run_parse_digits.py` file, simply replace my sample in `sys.path.append()` with your own project path. Then do the same in the `tests/test_parse_digits.py` file. Those two settings will help you run the tests and diagnose issues should anything untoward happen while running the scripts. Tests can be run from the command line while in the top-level directory with `python -m unittest discover -s tests`.
 
 Meantime, just add in your own file paths and get to analyzing.
 
