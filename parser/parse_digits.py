@@ -6,17 +6,6 @@ returning minimum value, maximum value, total number
 processed and the mode. might even throw in median just
 for fun.
 
-args:
-a path to the file to analyze
-
-returns:
-a namedtuple structured thus:
-[0] number of integers processed
-[1] largest number
-[2] smallest number
-[3] the most frequently occurring value
-[4] the number of occurrences
-[5] the median value in the list
 """
 
 from collections import Counter
@@ -49,27 +38,48 @@ def find_median(lst):
 
 
 def find_length(lst):
+    """
+    given an iterable, returns its length
+    """
     return len(lst)
 
 
 def find_largest(lst):
+    """
+    given an iterable containing integers, returns the largest value
+    """
     return max(lst)
 
 
 def find_smallest(lst):
+    """
+    given an iterable containing integers, returns its smallest value
+    """
     return min(lst)
 
 
 def find_mode(lst):
+    """
+    given an iterable, returns a tuple of the (most common value, number of occurrences)
+    """
     return Counter(lst).most_common()[0]
 
 
 def parse_digits(path):
     """
-    a parser for a file object containing an unknown number of  integers separated by spaces
+    runs parser functions for a file object containing an unknown number of  integers separated by spaces
 
     args:
     a path to a file containing the integers
+
+    returns:
+    a namedtuple structured thus:
+    [0] number of integers processed
+    [1] largest number
+    [2] smallest number
+    [3] the most frequently occurring value
+    [4] the number of occurrences
+    [5] the median value in the list
     """
     with open(path, 'r') as f:
         try:
