@@ -26,7 +26,7 @@ def find_median(lst):
     sorted_list = sorted(lst)
     len_lst = len(sorted_list)
     if len_lst < 1:
-        return 'You are a silly person with an empty list'
+        raise Exception('You are a silly person with an empty list')
     idx = (len_lst - 1) // 2
     # for a list with an odd number of values,
     # we can just find the middle one
@@ -80,13 +80,17 @@ def parse_digits(path):
     [3] the most frequently occurring value
     [4] the number of occurrences
     [5] the median value in the list
+
+    raises:
+    a string-formatted exception if an item in the file is not a number in the expected format
+
     """
     with open(path, 'r') as f:
         try:
             results = [int(l) for line in f for l in line.split()]
         except TypeError as e:
-            return '{}\n\t{}'.format(e,
-                                    "Are you sure this is really a file full of integers? Because I'm not")
+            raise Exception('{}\n\t{}'.format(e,
+                                    "Are you sure this is really a file full of integers? Because I'm not"))
 
         len_results = find_length(results)
         max_result = find_largest(results)
