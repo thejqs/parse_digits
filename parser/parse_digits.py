@@ -84,17 +84,19 @@ def parse_digits(path):
     with open(path, 'r') as f:
         try:
             results = [int(l) for line in f for l in line.split()]
-            len_results = find_length(results)
-            max_result = find_largest(results)
-            min_result = find_smallest(results)
-            mode = find_mode(results)
-            median = find_median(results)
-            SummaryDigits = namedtuple('SummaryDigits', ['length', 'maximum', 'minimum', 'mode_value', 'mode_occurrences', 'median'])
-            p = SummaryDigits(len_results, max_result, min_result, mode[0], mode[1], median)
-            return p
         except TypeError as e:
             return '{}\n\t{}'.format(e,
                                     "Are you sure this is really a file full of integers? Because I'm not")
+
+        len_results = find_length(results)
+        max_result = find_largest(results)
+        min_result = find_smallest(results)
+        mode = find_mode(results)
+        median = find_median(results)
+        SummaryDigits = namedtuple('SummaryDigits', ['length', 'maximum', 'minimum', 'mode_value', 'mode_occurrences', 'median'])
+        p = SummaryDigits(len_results, max_result, min_result, mode[0], mode[1], median)
+        return p
+
 
 if __name__ == '__main__':
     path = '../data/numbers.txt'
