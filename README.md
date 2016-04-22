@@ -31,7 +31,7 @@ Of 1000 integers:
 This script took 0:00:00.004898 to run
 ```
 
-But it's fine to import `parse_digits` from the `parser` directory and `python parse_digits(your_filepath_here)`. In a case like that, you get back a structured collection, `SummaryDigits`, which is a `namedtuple` and accessible by position or keyword argument. You'll find what you need for either both inside the file itself. That output looks like this:
+But it's fine to import `parse_digits` from the `parser` directory and `python parse_digits(your_filepath_here)`. In a case like that, you get back a structured collection, `SummaryDigits`, which is a `namedtuple` and accessible by position or keyword argument. You'll find what you need for either or both inside the file itself. That output looks like this:
 
 ```python
 >>> from parser import parse_digits as pd
