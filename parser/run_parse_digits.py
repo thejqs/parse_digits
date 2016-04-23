@@ -58,5 +58,5 @@ def run_parser(path):
 
 
 if __name__ == '__main__':
-    path = '../data/test_data.txt'
+    path = '../data/numbers.txt'
     run_parser(path)
