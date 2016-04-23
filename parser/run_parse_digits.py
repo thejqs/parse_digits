@@ -42,7 +42,7 @@ def run_parser(path):
     """
     start = datetime.datetime.now()
     parsed_digits = pd.parse_digits(path)
-    print("""Of {0} integers:
+    print("""Of {0} integers from path:
            \t{1} was the highest,
            \t{2} was the lowest,
            \t{3} occurred the most times with {4},
