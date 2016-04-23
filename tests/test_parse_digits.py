@@ -1,15 +1,24 @@
 #!usr/bin/env python3
 
+"""
+A test suite for our parser, testing granular function output,
+cross-file return structure and sharing, and a
+range of inputs.
+"""
+
+# standard library imports
 import unittest
-import os, sys
+import sys
 
 sys.path.append('/home/thejqs/Development/projects_2016/panasas_digits/')
 
+# project imports
 from parser import parse_digits as pd
 from parser import run_parse_digits as rpd
 
 lst = [1, 129, 129, 7, 2, 6, 2398562906, 9]
 path = 'data/test_data.txt'
+
 
 class DigitParserTextCase(unittest.TestCase):
     def test_parse_digits_mode(self):

@@ -7,11 +7,12 @@ results and execution time
 """
 
 # standard library imports
-import os, sys
+import sys
 import datetime
-# project imports
 
 sys.path.append('/home/thejqs/Development/projects_2016/panasas_digits/')
+
+# project imports
 from parser import parse_digits as pd
 
 def run_parser(path):

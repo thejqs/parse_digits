@@ -8,6 +8,7 @@ for fun.
 
 """
 
+# standard library imports
 from collections import Counter
 from collections import namedtuple
 
