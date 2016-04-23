@@ -98,6 +98,9 @@ def parse_digits(path):
             raise Exception('{}\n\t{}'.format(e,
                                     "Are you sure this is really a file full of integers? Because I'm not"))
 
+        # one note: while not strictly necessary,
+        # assigning these temporary variables is for 
+        # readability and to avoid overly packing the lines
         len_results = find_length(results)
         max_result = find_largest(results)
         min_result = find_smallest(results)
