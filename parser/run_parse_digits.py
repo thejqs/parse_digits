@@ -42,11 +42,12 @@ def run_parser(path):
     """
     start = datetime.datetime.now()
     parsed_digits = pd.parse_digits(path)
-    print("""Of {0} integers from path:
-           \t{1} was the highest,
-           \t{2} was the lowest,
-           \t{3} occurred the most times with {4},
-           \tand the median was {5}.""".format(parsed_digits[0],
+    print("""Of {0} integers from {1}:
+           \t{2} was the highest,
+           \t{3} was the lowest,
+           \t{4} occurred the most times with {5},
+           \tand the median was {6}.""".format(parsed_digits[0],
+                                         path,
                                          parsed_digits[1],
                                          parsed_digits[2],
                                          parsed_digits[3],
