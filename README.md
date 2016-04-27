@@ -2,7 +2,7 @@
 
 It's an exciting time. You have files upon files of of what you presume are integers, but you have no good way to get basic analysis of them. We can help.
 
-Snakes might not normally be your friends, but **consider Python**. Perhaps not the fastest languages, perhaps not the new hotness, but it's perfect for something like this. This is written in Python 3.4.
+Snakes might not normally be your friends, but **consider Python**. Perhaps not the fastest of languages, perhaps not the new hotness, but it's perfect for something like this. This is written in Python 3.4.
 
 With a pair of simple, tested scripts running together in unison and a couple small modifications, you can quickly see: 
 
