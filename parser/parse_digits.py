@@ -2,9 +2,8 @@
 
 """
 analyzes a text file containing an unknown number of integers,
-returning minimum value, maximum value, total number
-processed and the mode. might even throw in median just
-for fun.
+returning minimum value, maximum value, median, total number
+processed and the mode.
 
 """
 
@@ -28,7 +27,7 @@ def find_median(lst):
     sorted_list = sorted(lst)
     len_lst = len(sorted_list)
     if len_lst < 1:
-        raise Exception('You are a silly person with an empty list')
+        raise Exception('This list is empty')
     idx = (len_lst - 1) // 2
     # for a list with an odd number of values,
     # we can just find the middle one
@@ -96,7 +95,7 @@ def parse_digits(path):
             results = [int(l) for line in f for l in line.split()]
         except TypeError as e:
             raise Exception('{}\n\t{}'.format(e,
-                                    "Are you sure this is really a file full of integers? Because I'm not"))
+                                              "Unable to cast to int. Perhaps there are more than whole numbers in this file"))
 
         # one note: while not strictly necessary,
         # assigning these temporary variables is for 
