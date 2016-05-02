@@ -10,7 +10,7 @@ results and execution time
 import sys
 import datetime
 
-sys.path.append('/home/thejqs/Development/projects_2016/panasas_digits/')
+sys.path.append('/home/thejqs/Development/projects_2016/parse_digits/')
 
 # project imports
 from parser import parse_digits as pd
@@ -29,7 +29,7 @@ def run_parser(path):
     [4] the number of occurrences
     [5] the median value in the list
 
-    or if you're a kwargs type of human:
+    if you prefer the namedtuple's kwargs:
     [0] = length
     [1] = maximum
     [2] = minimum
@@ -42,11 +42,11 @@ def run_parser(path):
     """
     start = datetime.datetime.now()
     parsed_digits = pd.parse_digits(path)
-    print("""Of {0} integers from {1}:
-           \t{2} was the highest,
-           \t{3} was the lowest,
-           \t{4} occurred the most times with {5},
-           \tand the median was {6}.""".format(parsed_digits[0],
+    print("""Of {} integers from {}:
+           \t{} was the highest,
+           \t{} was the lowest,
+           \t{} occurred the most times with {},
+           \tand the median was {}.""".format(parsed_digits[0],
                                          path,
                                          parsed_digits[1],
                                          parsed_digits[2],
