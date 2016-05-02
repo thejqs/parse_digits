@@ -22,6 +22,8 @@ lst = [1, 129, 129, 7, 2, 6, 2398562906, 9]
 path = 'data/test_data.txt'
 # this one contains 9999 numbers
 path2 = 'data/numbers.txt'
+# and this one has some unallowed items
+path3 = 'data/bad_numbers.txt'
 
 class DigitParserTextCase(unittest.TestCase):
     def test_parse_digits_mode(self):
@@ -55,3 +57,6 @@ class DigitParserTextCase(unittest.TestCase):
         self.assertIn(1000, rpd.run_parser(path2))
         self.assertIn(205, rpd.run_parser(path2))
         self.assertIn(21, rpd.run_parser(path2))
+
+    def test_type_error(self):
+        self.assertRaises(ValueError, pd.parse_digits, path3)
